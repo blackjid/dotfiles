@@ -1,0 +1,41 @@
+[user]
+	name = Juan Ignacio Donoso
+	email = jidonoso@gmail.com
+
+[alias]
+	co = checkout
+	st = status
+	cm = commit
+	rb = rebase
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative
+	su = submodule update --init --recursive
+	ci = commit -a
+	wip = commit -a -m "wip"
+	dewip = reset HEAD~1
+
+[color]
+	ui = true
+
+[gui]
+	fontdiff = -family \"Lucida Console\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+
+[merge]
+	tool = kdiff3
+
+[help]
+	autocorrect = 1
+
+[push]
+	default = upstream
+
+[hub]
+	protocol = https
+
+[credential]
+	helper = /opt/boxen/bin/boxen-git-credential
+
+[core]
+	excludesfile = /opt/boxen/config/git/gitignore
+
+[url "https://"]
+	insteadOf = git://
