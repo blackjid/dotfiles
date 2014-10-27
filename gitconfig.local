@@ -13,24 +13,6 @@
 	wip = commit -a -m "wip"
 	dewip = reset HEAD~1
 
-[color]
-	ui = true
-
-[gui]
-	fontdiff = -family \"Lucida Console\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
-
-[merge]
-	tool = kdiff3
-
-[help]
-	autocorrect = 1
-
-[push]
-	default = upstream
-
-[hub]
-	protocol = https
-
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
 
