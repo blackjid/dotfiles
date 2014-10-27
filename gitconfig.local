@@ -2,17 +2,6 @@
 	name = Juan Ignacio Donoso
 	email = jidonoso@gmail.com
 
-[alias]
-	co = checkout
-	st = status
-	cm = commit
-	rb = rebase
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative
-	su = submodule update --init --recursive
-	ci = commit -a
-	wip = commit -a -m "wip"
-	dewip = reset HEAD~1
-
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
 
