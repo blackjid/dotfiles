@@ -1,0 +1,35 @@
+# enable antigen
+source ~/src/dotfiles/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+# Bundles
+antigen bundles <<EOBUNDLES
+  brew
+  git
+  gem
+  capistrano
+
+  zsh-users/zsh-syntax-highlighting
+  zsh-users/zsh-history-substring-search
+  zsh-users/zsh-completions
+  zsh-users/zaw
+EOBUNDLES
+
+# Tracks your most used directories, based on 'frecency'. And its accompanying
+# setup code.
+antigen bundle rupa/z
+add-zsh-hook precmd _z_precmd
+function _z_precmd {
+  _z --add "$PWD"
+}
+
+# The theme
+antigen theme miloshadzic
+
+# Apply antigen
+antigen apply
+
+# bind UP and DOWN arrow keys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
