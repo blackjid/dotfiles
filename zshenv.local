@@ -3,3 +3,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 source /opt/boxen/env.sh
+
+# Keys config
+[[ -f ~/.zshenv.keys ]] && source ~/.zshenv.keys
