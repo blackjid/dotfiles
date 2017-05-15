@@ -1,0 +1,6 @@
+brew 'diff-so-fancy'
+brew 'hub'
+brew 'nodenv'
+brew 'node-build'
+brew 'rbenv'
+brew 'ruby-build'
