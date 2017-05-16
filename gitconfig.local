@@ -5,8 +5,12 @@
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
 
-[core]
-	excludesfile = /opt/boxen/config/git/gitignore
+[gitsh]
+  noGreeting = true
+  defaultCommand = status --short --branch && :echo
 
-[url "https://"]
-	insteadOf = git://
+[gitsh "color"]
+  default = cyan
+  untracked = yellow
+  modified = red
+
