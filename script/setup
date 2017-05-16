@@ -1,0 +1,8 @@
+#!/bin/bash
+
+brew bundle --file=- <<EOF
+tap 'thoughtbot/formulae'
+brew 'rcm'
+EOF
+
+rcup -d $HOME/.dotfiles -x README.md -x Brewfile
