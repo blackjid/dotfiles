@@ -1,2 +1,1 @@
-EXCLUDES="README.md"
-DOTFILES_DIRS="$HOME/.dotfiles"
+EXCLUDES="README.md script"

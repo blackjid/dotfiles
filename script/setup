@@ -5,7 +5,7 @@ tap 'thoughtbot/formulae'
 brew 'rcm'
 EOF
 
-rcup -d $HOME/.dotfiles -x README.md
+RCRC=$(pwd)/rcrc rcup
 
 # Set zsh as the default shell
 if [ $SHELL != '/bin/zsh' ]; then
