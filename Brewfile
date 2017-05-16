@@ -19,6 +19,7 @@ brew 'yarn'
 brew 'zsh-completions'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
+brew 'zsh-autosuggestions'
 brew 'zsh'
 
 cask '1password'

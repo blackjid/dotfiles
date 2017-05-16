@@ -14,6 +14,7 @@ antigen bundles <<EOBUNDLES
 
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
+  zsh-users/zsh-autosuggestions
 EOBUNDLES
 
 # The theme
