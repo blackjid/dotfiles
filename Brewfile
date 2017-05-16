@@ -1,4 +1,5 @@
 brew 'ack'
+brew 'antigen'
 brew 'awscli'
 brew 'diff-so-fancy'
 brew 'fasd'

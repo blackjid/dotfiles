@@ -1,5 +1,5 @@
 # enable antigen
-source ~/src/dotfiles/antigen/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 
 # Load oh-my-zsh
 antigen use oh-my-zsh
@@ -14,7 +14,6 @@ antigen bundles <<EOBUNDLES
 
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
-  zsh-users/zsh-completions
 EOBUNDLES
 
 # The theme
