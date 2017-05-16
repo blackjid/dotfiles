@@ -1,4 +1,5 @@
 tap 'nodenv/nodenv'
+tap 'thoughtbot/formulae'
 
 brew 'ack'
 brew 'antigen'
@@ -16,6 +17,7 @@ brew 'nodenv'
 brew 'nodenv-aliases'
 brew 'nodenv-vars'
 brew 'openssl'
+brew 'parity'
 brew 'pkg-config'
 brew 'rbenv'
 brew 'rbenv-aliases'
