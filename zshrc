@@ -9,6 +9,7 @@ antigen bundles <<EOBUNDLES
   brew
   git
   gem
+  heroku
   osx
   fasd
 
