@@ -6,3 +6,8 @@ brew 'rcm'
 EOF
 
 rcup -d $HOME/.dotfiles -x README.md
+
+# Set zsh as the default shell
+if [ $SHELL != '/bin/zsh' ]; then
+  chsh -s /bin/zsh
+fi
