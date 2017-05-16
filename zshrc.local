@@ -9,7 +9,6 @@ antigen bundles <<EOBUNDLES
   brew
   git
   gem
-  capistrano
   osx
   fasd
 
@@ -27,3 +26,4 @@ antigen apply
 # bind UP and DOWN arrow keys
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
