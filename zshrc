@@ -13,13 +13,15 @@ antigen bundles <<EOBUNDLES
   osx
   fasd
 
+  mafredri/zsh-async
+  zsh-users/zsh-completions
+  zsh-users/zsh-autosuggestions
+  sindresorhus/pure
+
+  # these should be at last!
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
-  zsh-users/zsh-autosuggestions
 EOBUNDLES
-
-# The theme
-antigen theme miloshadzic
 
 # Apply antigen
 antigen apply
