@@ -54,6 +54,7 @@ setopt extendedglob
 # Init rbenv and nodenv
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
+eval "$(goenv init -)"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
