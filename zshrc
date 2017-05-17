@@ -51,5 +51,9 @@ SAVEHIST=100000
 # Enable extended globbing
 setopt extendedglob
 
+# Init rbenv and nodenv
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
