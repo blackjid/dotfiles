@@ -13,6 +13,7 @@ brew 'imagemagick'
 brew 'jq'
 brew 'libyaml'
 brew 'makedepend'
+brew 'mas'
 brew 'node-build'
 brew 'nodenv'
 brew 'nodenv-aliases'
@@ -53,3 +54,8 @@ cask 'spotify'
 cask 'telegram'
 cask 'toggldesktop'
 cask 'visual-studio-code'
+
+mas "Noizio", id: 928871589
+mas "Simplenote", id: 692867256
+mas "Textual", id: 896450579
+mas "Todoist", id: 585829637
