@@ -1,9 +1,9 @@
 [user]
-	name = Juan Ignacio Donoso
-	email = jidonoso@gmail.com
+  name = Juan Ignacio Donoso
+  email = jidonoso@gmail.com
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [alias]
   aa = add --all
@@ -12,6 +12,7 @@
   cm = commit
   ci = commit -a
   co = checkout
+  cp = checkout --patch
   co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
@@ -56,4 +57,4 @@
   modified = red
 
 [github]
-	user = blackjid
+  user = blackjid
