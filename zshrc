@@ -50,6 +50,7 @@ SAVEHIST=100000
 
 # Enable extended globbing
 setopt extendedglob
+setopt no_nomatch
 
 # Init rbenv and nodenv
 eval "$(rbenv init -)"
