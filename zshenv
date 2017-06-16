@@ -12,9 +12,5 @@ export RCRC="$HOME/.dotfiles/rcrc"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# mkdir .git/safe in the root of repositories you trust
-export PATH=".git/safe/../../bin:$PATH"
-export PATH=".git/safe/../../node_modules/.bin:$PATH"
-
 # Keys config
 [[ -f ~/.zshenv.keys ]] && source ~/.zshenv.keys
