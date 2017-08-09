@@ -6,12 +6,12 @@ antigen use oh-my-zsh
 
 # Bundles
 antigen bundles <<EOBUNDLES
-  brew
   git
   gem
   heroku
   osx
   fasd
+  thefuck
 
   mafredri/zsh-async
   zsh-users/zsh-completions
