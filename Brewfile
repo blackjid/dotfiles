@@ -84,6 +84,16 @@ cask 'tunnelblick'
 cask 'typora'
 cask 'visual-studio-code'
 
+# Quicklook plugins
+cask 'betterzipql'
+cask 'qlcolorcode'
+cask 'qlimagesize'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'quicklookapk'
+
 mas "Noizio", id: 928871589
 mas "Simplenote", id: 692867256
 mas "Textual", id: 896450579
