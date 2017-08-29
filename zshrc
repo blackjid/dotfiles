@@ -71,5 +71,12 @@ eval "$(goenv init -)"
 export PATH=".git/safe/../../bin:$PATH"
 export PATH=".git/safe/../../node_modules/.bin:$PATH"
 
+# functions
+if [ -d ~/.bash_functions ]; then
+  for file in ~/.bash_functions/*; do
+    . "$file"
+  done
+fi
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
