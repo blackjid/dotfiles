@@ -1,1 +1,8 @@
-/Users/jidonoso/.dotfiles/dotfiles/bash_functions/port-clean
+function port-clean {
+  if [ -z $1 ]; then
+    echo "usage: port-clean [port]"
+    return 1
+  fi
+
+  kill $(lsof -t -i:$1) 2> /dev/null
+}
