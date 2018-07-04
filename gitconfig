@@ -19,6 +19,8 @@
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
+  merged-branches = branch --merged master --format "%(refname:short)"
+  prune-branches = !sh -c 'git merged-branches | grep -v master | xargs -n 1 git branch -d'
   fixup = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git rebase -i --autosquash $REV^' -
   merge-branch = !git checkout master && git merge @{-1}
   pr = !gh pull-request
