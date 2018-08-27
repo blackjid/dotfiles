@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function ks {
+  if [ -z $1 ]; then
+    echo "usage: ks [stage]"
+    return 1
+  fi
+
+  PROJECT_REGEX="github.com/.*/(.*).git"
+  GIT_REMOTE_URL=`git remote get-url origin`
+
+  STAGE=$1
+
+  if [[ $GIT_REMOTE_URL =~ $PROJECT_REGEX ]]; then
+      echo "${match[1]}"
+      PROJECT_NAME=${match[1]}
+  else
+      echo "No git remote found"
+      return 1
+  fi
+
+  echo "Switching to $PROJECT_NAME-$STAGE..."
+  kubectx "gke_buda-default-${STAGE}_us-east1-b_apps-${STAGE}"
+  kns $PROJECT_NAME-$STAGE
+}
