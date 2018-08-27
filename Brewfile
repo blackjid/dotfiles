@@ -67,6 +67,10 @@ brew 'tree'
 brew 'watch'
 brew 'wget'
 
+brew 'postgresql', start_service: false
+brew 'mysql', start_service: false
+brew 'redis', start_service: false
+
 cask '1password'
 cask 'alfred'
 cask 'bitbar'

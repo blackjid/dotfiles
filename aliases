@@ -39,3 +39,9 @@ alias k="kubectl"
 alias kctx="kubectx"
 alias kns="kubens"
 alias gc="gcloud"
+
+# Global Docker Compose
+alias services="docker-compose -p global -f ~/.docker-compose.global.yml ps"
+alias services-up="docker-compose -p global -f ~/.docker-compose.global.yml up -d"
+alias services-down="docker-compose -p global -f ~/.docker-compose.global.yml down"
+alias services-logs="docker-compose -p global -f ~/.docker-compose.global.yml logs"
