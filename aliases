@@ -1,4 +1,5 @@
 # Unix
+alias cat="bat"
 alias tlf="tail -f"
 alias ln='ln -v'
 alias mkdir='mkdir -p'

@@ -21,6 +21,7 @@ brew 'readline'
 
 brew 'antigen'
 brew 'awscli'
+brew 'bat'
 brew 'chromedriver'
 brew 'diff-so-fancy'
 brew 'drone'
