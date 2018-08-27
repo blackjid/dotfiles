@@ -118,10 +118,6 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " Always use vertical diffs
 set diffopt+=vertical
 
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
