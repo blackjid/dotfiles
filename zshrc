@@ -9,14 +9,18 @@ antigen bundles <<EOBUNDLES
   git
   gem
   heroku
+  kubectl
   osx
   fasd
   thefuck
+  key-bindings
+
+  djui/alias-tips
 
   mafredri/zsh-async
   zsh-users/zsh-completions
   zsh-users/zsh-autosuggestions
-  sindresorhus/pure
+  sindresorhus/pure@v1.5.2
 
   # these should be at last!
   zsh-users/zsh-syntax-highlighting
