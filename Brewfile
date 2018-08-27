@@ -113,8 +113,9 @@ cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'quicklookapk'
 
+mas "Annotate", id: 918207447
 mas "Noizio", id: 928871589
 mas "Simplenote", id: 692867256
 mas "Textual", id: 896450579
 mas "Todoist", id: 585829637
-mas "Annotate", id: 918207447
+mas "ToothFairy", id: 1191449274
