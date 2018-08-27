@@ -31,3 +31,9 @@ alias path="echo $PATH | tr -s ':' '\n'"
 # Other aliases
 eval $(thefuck --alias)
 eval $(hub alias -s)
+
+# Kubernetes and Gcloud
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+alias gc="gcloud"
