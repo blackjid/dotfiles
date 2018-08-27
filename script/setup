@@ -1,5 +1,4 @@
 #!/bin/bash
-
 brew bundle --file=- <<EOF
 tap 'thoughtbot/formulae'
 brew 'rcm'
@@ -11,3 +10,6 @@ RCRC=$(pwd)/rcrc rcup
 if [ $SHELL != '/bin/zsh' ]; then
   chsh -s /bin/zsh
 fi
+
+# Run macos script
+$HOME/.macos
