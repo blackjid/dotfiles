@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function port-clean {
   if [ -z $1 ]; then
     echo "usage: port-clean [port]"
