@@ -69,6 +69,7 @@ setopt no_nomatch
 # Init rbenv and nodenv
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
+eval "$(pyenv init -)"
 
 # Init go
 eval "$(goenv init -)"
