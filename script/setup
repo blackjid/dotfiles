@@ -13,3 +13,6 @@ fi
 
 # Run macos script
 $HOME/.macos
+
+# Add global docker compose services
+docker-compose -p global -f $HOME/Downloads/docker-compose.global.yml create
