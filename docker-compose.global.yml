@@ -10,18 +10,20 @@ services:
     volumes:
       - pg10data:/var/lib/postgresql/data
     ports:
-      - 5432
+      - 5432:5432
   postgresql96:
     <<: *postgres
     image: mdillon/postgis:9.6
     volumes:
       - pg9data:/var/lib/postgresql/data
+    ports:
+    - 5432:5432
   mysql57:
     image: mysql:5.7
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
     ports:
-      - 3306
+      - 3306:3306
     volumes:
       - mysql57data:/var/lib/mysql
   redis:
@@ -29,7 +31,7 @@ services:
     volumes:
       - redisdata:/data
     ports:
-      - 6907
+      - 6907:6907
 
 volumes:
   pg10data:
