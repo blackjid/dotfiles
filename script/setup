@@ -15,4 +15,4 @@ fi
 $HOME/.macos
 
 # Add global docker compose services
-docker-compose -p global -f $HOME/Downloads/docker-compose.global.yml up --no-start
+docker-compose -p global -f $HOME/.docker-compose.global.yml up --no-start
