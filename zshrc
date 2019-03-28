@@ -69,6 +69,10 @@ setopt hist_ignore_space
 setopt extendedglob
 setopt no_nomatch
 
+# Set right prompt
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+RPROMPT='$(kube_ps1)'
+
 # Init rbenv and nodenv
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
