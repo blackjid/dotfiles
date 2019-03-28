@@ -1,6 +1,9 @@
 # enable antigen
 source /usr/local/share/antigen/antigen.zsh
 
+# Load FPATH functions
+FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
 # Load oh-my-zsh
 antigen use oh-my-zsh
 
