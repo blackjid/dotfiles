@@ -31,7 +31,7 @@ services:
     volumes:
       - redisdata:/data
     ports:
-      - 6907:6907
+      - 6379:6379
 
 volumes:
   pg10data:
