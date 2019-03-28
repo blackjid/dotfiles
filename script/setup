@@ -5,14 +5,3 @@ brew 'rcm'
 EOF
 
 RCRC=$(pwd)/rcrc rcup
-
-# Set zsh as the default shell
-if [ $SHELL != '/bin/zsh' ]; then
-  chsh -s /bin/zsh
-fi
-
-# Run macos script
-$HOME/.macos
-
-# Add global docker compose services
-docker-compose -p global -f $HOME/.docker-compose.global.yml up --no-start
