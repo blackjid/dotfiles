@@ -12,5 +12,8 @@ fi
 # Run macos script
 $HOME/.macos
 
+# Run scripts
+script/extract-onepassword-secrets
+
 # Add global docker compose services
 docker-compose -p global -f $HOME/.docker-compose.global.yml up --no-start
