@@ -1,0 +1,3 @@
+/ssh/id_*
+!/ssh/id_*.pub
+/ssh/known_hosts

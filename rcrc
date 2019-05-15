@@ -1,1 +1,1 @@
-EXCLUDES="README.md script"
+EXCLUDES="README.md script .gitignore"
