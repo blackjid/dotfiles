@@ -12,5 +12,5 @@ export RCRC="$HOME/.dotfiles/rcrc"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Keys config
-[[ -f ~/.zshenv.keys ]] && source ~/.zshenv.keys
+# Source secrets
+[[ -f ~/.secrets ]] && source ~/.secrets
