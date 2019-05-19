@@ -120,7 +120,7 @@ mas 'com.agilebits.onepassword7', id: 1333542190
 mas 'Annotate', id: 918207447
 mas 'Noizio', id: 928871589
 mas 'Simplenote', id: 692867256
-mas 'Slack', id: 803453959'
+mas 'Slack', id: 803453959
 mas 'Textual', id: 896450579
 mas 'Todoist', id: 585829637
 mas 'ToothFairy', id: 1191449274
