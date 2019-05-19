@@ -115,7 +115,7 @@ cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'quicklookapk'
 
-mas 'com.agilebits.onepassword7', id: 1333542190
+mas '1Password', id: 1333542190
 mas 'Annotate', id: 918207447
 mas 'Noizio', id: 928871589
 mas 'Simplenote', id: 692867256
