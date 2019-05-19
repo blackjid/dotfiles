@@ -4,7 +4,6 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'homebrew/versions'
 
 tap 'drone/drone'
 tap 'heroku/brew'
