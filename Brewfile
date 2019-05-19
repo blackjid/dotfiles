@@ -106,7 +106,7 @@ cask 'tunnelblick'
 cask 'visual-studio-code'
 
 # Quicklook plugins
-cask 'betterzipql'
+cask 'betterzip'
 cask 'qlcolorcode'
 cask 'qlimagesize'
 cask 'qlmarkdown'
