@@ -72,6 +72,7 @@ brew 'postgresql', start_service: false
 brew 'mysql', start_service: false
 brew 'redis', start_service: false
 
+cask '1password'
 cask '1password-cli'
 cask 'alfred'
 cask 'balenaetcher'
@@ -115,7 +116,6 @@ cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'quicklookapk'
 
-mas '1Password', id: 1333542190
 mas 'Annotate', id: 918207447
 mas 'Noizio', id: 928871589
 mas 'Simplenote', id: 692867256
