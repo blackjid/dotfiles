@@ -124,3 +124,5 @@ mas 'Slack', id: 803453959
 mas 'Textual', id: 896450579
 mas 'Todoist', id: 585829637
 mas 'ToothFairy', id: 1191449274
+mas 'Trello', id: 1278508951
+
