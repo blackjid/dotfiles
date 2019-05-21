@@ -43,6 +43,7 @@ bindkey -e
 bindkey '^[f' forward-word
 bindkey '^[b' backward-word
 bindkey '^[h' backward-delete-word
+bindkey '^[d' backward-kill-line
 
 # makes color constants available
 autoload -U colors
