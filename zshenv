@@ -12,5 +12,8 @@ export RCRC="$HOME/.dotfiles/rcrc"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Update hombrew every 2 hours
+export HOMEBREW_AUTO_UPDATE_SECS=7200
+
 # Source secrets
 [[ -f ~/.secrets ]] && source ~/.secrets
