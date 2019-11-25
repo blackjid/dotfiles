@@ -108,6 +108,7 @@ cask 'telegram'
 cask 'trezor-bridge'
 cask 'tunnelblick'
 cask 'visual-studio-code'
+cask 'yubico-yubikey-manager'
 
 # Quicklook plugins
 cask 'betterzip'
