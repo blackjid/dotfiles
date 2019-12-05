@@ -77,6 +77,9 @@ setopt no_nomatch
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 RPROMPT='$(kube_ps1)'
 
+# Init direnv
+eval "$(direnv hook zsh)"
+
 # Init rbenv and nodenv
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
