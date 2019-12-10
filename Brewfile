@@ -86,8 +86,8 @@ cask 'contexts'
 cask 'daisydisk'
 cask 'dash'
 cask 'discord'
-cask 'homebrew/cask-versions/docker-edge'
-cask 'homebrew/cask-drivers/focusrite-control'
+cask 'docker-edge'
+cask 'focusrite-control'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'google-photos-backup-and-sync'
@@ -129,5 +129,4 @@ mas 'Textual', id: 896450579
 mas 'Todoist', id: 585829637
 mas 'ToothFairy', id: 1191449274
 mas 'Trello', id: 1278508951
-mas 'XCode', id: 497799836
-
+mas 'XCode', id: 497799835
