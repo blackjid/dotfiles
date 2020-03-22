@@ -88,7 +88,7 @@ eval "$(pyenv init -)"
 
 # Init go
 eval "$(goenv init -)"
-export GOPATH=$HOME/go
+export GOPATH=$HOME/go/$(goenv version-name)
 export PATH=$PATH:$GOPATH/bin
 
 # mkdir .git/safe in the root of repositories you trust
