@@ -97,6 +97,9 @@ export PATH=".git/safe/../../node_modules/.bin:$PATH"
 # android sdk
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 
+# Force gcloud to use global installed python
+export CLOUDSDK_PYTHON=$(which python)
+
 # functions
 if [ -d ~/.bash_functions ]; then
   for file in ~/.bash_functions/*; do
