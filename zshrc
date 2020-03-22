@@ -56,6 +56,7 @@ export CLICOLOR=1
 HISTFILE=~/.zhistory
 HISTSIZE=100000
 SAVEHIST=100000
+setopt HIST_IGNORE_SPACE
 
 # Don't show duplicate history entires
 setopt hist_find_no_dups
