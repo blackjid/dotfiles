@@ -17,6 +17,8 @@ brew 'libyaml'
 brew 'makedepend'
 brew 'pkg-config'
 brew 'readline'
+brew 'libpqxx'
+brew 'mysql-connector-c++'
 
 brew 'antigen'
 brew 'awscli'
@@ -71,8 +73,6 @@ brew 'tree'
 brew 'watch'
 brew 'wget'
 
-brew 'postgresql', start_service: false
-brew 'mysql', start_service: false
 brew 'redis', start_service: false
 
 cask '1password'
