@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Sleepwatcher Wake Script
+
+## Connect Headphones
+BLUEUTIL_PATH=/usr/local/bin/blueutil
+BT_DEVICE_ID="70-26-05-3b-ba-2c"
+
+if [ $($BLUEUTIL_PATH --is-connected $BT_DEVICE_ID) == 0 ]; then
+  $BLUEUTIL_PATH --connect $BT_DEVICE_ID || echo "Device not found..."
+fi
