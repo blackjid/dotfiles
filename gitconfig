@@ -39,6 +39,9 @@
 [push]
   default = upstream
 
+[pull]
+  ff = only
+
 [color]
   ui = auto
 
