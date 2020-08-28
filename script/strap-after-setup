@@ -15,6 +15,3 @@ $HOME/.macos
 # Run scripts
 script/extract-onepassword-secrets
 script/install-vscode-extensions
-
-# Add global docker compose services
-docker-compose -p global -f $HOME/.docker-compose.global.yml up --no-start
