@@ -4,10 +4,15 @@
 cd $(dirname $0)/..
 
 # Set zsh as the default shell
-if [ "$SHELL" != "/bin/zsh" ]
+if [ "$SHELL" != "/usr/local/bin/fish" ]
 then
-  chsh -s /bin/zsh jidonoso
+  echo /usr/local/bin/fish | sudo tee -a /etc/shells
+  chsh -s /usr/local/bin/fish jidonoso
 fi
+
+# Install fisher
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fisher
 
 # Run macos script
 $HOME/.macos
