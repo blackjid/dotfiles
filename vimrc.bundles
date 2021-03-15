@@ -19,6 +19,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
