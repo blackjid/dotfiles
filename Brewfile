@@ -65,6 +65,7 @@ brew 'yq'
 
 # Kubernetes
 tap 'derailed/k9s'
+brew 'helm'
 brew 'k9s'
 brew 'kind'
 brew 'kubectx'
