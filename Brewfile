@@ -54,7 +54,6 @@ brew 'pv'
 brew 'rcm'
 brew 'rsync'
 brew 'sleepwatcher', restart_service: true
-brew 'sshfs'
 brew 'starship'
 brew 'terraform'
 brew 'thefuck'
@@ -122,7 +121,7 @@ cask 'fogpad'
 cask 'helm'
 cask 'midi-monitor'
 cask 'native-access'
-cask 'ob-xd'
+# cask 'ob-xd'
 cask 'spotify'
 cask 'surge-synthesizer'
 cask 'sysex-librarian'
@@ -139,8 +138,8 @@ cask 'quicklookapk'
 # Fonts
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
-cask 'font-roboto'
-cask 'font-roboto-mono'
+# cask 'font-roboto'
+# cask 'font-roboto-mono'
 
 mas 'Annotate', id: 918207447
 mas 'Noizio', id: 928871589
