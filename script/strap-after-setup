@@ -15,8 +15,8 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 fisher
 
 # Run macos script
-$HOME/.macos
+# $HOME/.macos
 
 # Run scripts
-script/extract-onepassword-secrets
+# script/extract-onepassword-secrets
 script/install-vscode-extensions
