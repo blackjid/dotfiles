@@ -13,13 +13,13 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.tslint
 esbenp.prettier-vscode
+golang.go
+hashicorp.terraform
 HookyQR.beautify
 keesschollaart.vscode-home-assistant
 liuji-jim.vue
-hashicorp.terraform
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
-ms-vscode.Go
 msjsdiag.debugger-for-chrome
 PeterJausovec.vscode-docker
 pflannery.vscode-versionlens
