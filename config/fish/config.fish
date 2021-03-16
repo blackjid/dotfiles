@@ -6,7 +6,7 @@ hub alias | source
 alias cat="bat"
 
 # Setup asdf
-source /usr/local/opt/asdf/asdf.fish
+source /opt/homebrew/opt/asdf/asdf.fish
 
 # Remove greeting
 set fish_greeting

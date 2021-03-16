@@ -4,10 +4,10 @@
 cd $(dirname $0)/..
 
 # Set zsh as the default shell
-if [ "$SHELL" != "/usr/local/bin/fish" ]
+if [ "$SHELL" != "/opt/homebrew/bin/fish" ]
 then
-  echo /usr/local/bin/fish | sudo tee -a /etc/shells
-  chsh -s /usr/local/bin/fish jidonoso
+  echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+  chsh -s /opt/homebrew/bin/fish jidonoso
 fi
 
 # Install fisher
