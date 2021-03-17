@@ -1,3 +1,6 @@
+# Add homebrew to the path
+set PATH /opt/homebrew/bin $PATH
+
 # Source Starship
 starship init fish | source
 
