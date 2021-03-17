@@ -45,6 +45,7 @@ brew 'heroku/brew/heroku'
 brew 'htop'
 brew 'hub'
 brew 'imagemagick'
+brew 'iperf3'
 brew 'jq'
 brew 'jsonnet'
 brew 'libvirt'
@@ -79,15 +80,15 @@ cask '1password'
 cask 'alfred'
 cask 'balenaetcher'
 cask 'bitbar'
-cask 'bitwarden'
+#cask 'bitwarden'
 cask 'canon-eos-webcam-utility'
 cask 'captain'
 cask 'contexts'
 cask 'discord'
 cask 'docker-edge'
+cask 'gitify'
 cask 'google-chrome'
 # cask 'google-cloud-sdk'
-cask 'google-photos-backup-and-sync'
 cask 'iterm2'
 cask 'kap'
 cask 'karabiner-elements'
@@ -142,6 +143,7 @@ cask 'font-fira-code-nerd-font'
 # cask 'font-roboto-mono'
 
 mas 'Annotate', id: 918207447
+mas 'Bitwarden', id: 1352778147
 mas 'Noizio', id: 928871589
 mas 'Simplenote', id: 692867256
 mas 'Slack', id: 803453959
