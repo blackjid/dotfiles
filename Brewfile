@@ -62,6 +62,7 @@ brew 'thoughtbot/formulae/parity'
 brew 'tldr'
 brew 'wifi-password'
 brew 'yq'
+brew 'z'
 
 # Kubernetes
 tap 'derailed/k9s'
