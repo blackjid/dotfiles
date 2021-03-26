@@ -37,7 +37,7 @@
   autocrlf = input
 
 [push]
-  default = upstream
+  default = current
 
 [pull]
   ff = only
