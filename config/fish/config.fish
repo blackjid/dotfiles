@@ -6,7 +6,6 @@ starship init fish | source
 
 # Aliases
 hub alias | source
-alias cat="bat"
 
 # Setup asdf
 source /opt/homebrew/opt/asdf/asdf.fish
