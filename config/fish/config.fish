@@ -4,9 +4,6 @@ set PATH /opt/homebrew/bin $PATH
 # Source Starship
 starship init fish | source
 
-# Aliases
-hub alias | source
-
 # Setup asdf
 source /opt/homebrew/opt/asdf/asdf.fish
 
