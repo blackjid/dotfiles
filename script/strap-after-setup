@@ -17,5 +17,8 @@ fisher
 # Run macos script
 # $HOME/.macos
 
+# Setup fzf key bindings
+$(brew --prefix)/opt/fzf/install
+
 # Run scripts
 # script/extract-onepassword-secrets
