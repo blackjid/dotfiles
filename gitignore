@@ -9,4 +9,3 @@ tags
 !tags/
 tmp/**/*
 !tmp/cache/.keep
-.vscode
