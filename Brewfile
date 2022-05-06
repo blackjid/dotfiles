@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+hostname = `hostname -s`.strip
+
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
@@ -96,28 +100,6 @@ cask 'whatsapp'
 cask 'yubico-yubikey-manager'
 cask 'zoom'
 
-# # 3d Printing
-# cask 'autodesk-fusion360'
-# cask 'prusaslicer'
-# cask 'ultimaker-cura'
-
-# Audio & Music
-# tap 'hannesbraun/homebrew-cask-audio'
-# cask 'dexed'
-# cask 'focusrite-control'
-# cask 'fogpad'
-# cask 'helm'
-# cask 'midi-monitor'
-# cask 'native-access'
-# cask 'spotify'
-# cask 'surge-synthesizer'
-# cask 'sysex-librarian'
-# cask 'transformant'
-# cask 'vcv-rack'
-# cask 'valhallafreqecho'
-# cask 'valhallaspacemodulator'
-# cask 'valhallasupermassive'
-
 # Quicklook plugins
 cask 'betterzip'
 cask 'qlimagesize'
@@ -134,3 +116,29 @@ mas 'Slack', id: 803453959
 mas 'Textual', id: 896450579
 mas 'ToothFairy', id: 1191449274
 mas 'XCode', id: 497799835
+
+##############################
+# Only for personal computer
+if hostname == 'black-mac'
+  # 3d Printing
+  cask 'autodesk-fusion360'
+  cask 'prusaslicer'
+  cask 'ultimaker-cura'
+
+  # Audio & Music
+  tap 'hannesbraun/homebrew-cask-audio'
+  cask 'dexed'
+  cask 'focusrite-control'
+  cask 'fogpad'
+  cask 'helm'
+  cask 'midi-monitor'
+  cask 'native-access'
+  cask 'spotify'
+  cask 'surge-synthesizer'
+  cask 'sysex-librarian'
+  cask 'transformant'
+  cask 'vcv-rack'
+  cask 'valhallafreqecho'
+  cask 'valhallaspacemodulator'
+  cask 'valhallasupermassive'
+end
