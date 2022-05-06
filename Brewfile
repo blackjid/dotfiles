@@ -8,6 +8,7 @@ tap 'homebrew/services'
 tap 'drone/drone'
 tap 'heroku/brew'
 tap 'thoughtbot/formulae'
+tap 'derailed/k9s'
 
 # Build tools and libs
 brew 'ack'
@@ -65,9 +66,7 @@ brew 'yq'
 brew 'z'
 
 # Kubernetes
-tap 'derailed/k9s'
 brew 'helm'
-brew 'k9s'
 brew 'kind'
 brew 'kubectx'
 brew 'kubernetes-cli'
@@ -78,20 +77,12 @@ brew 'derailed/k9s/k9s'
 
 cask '1password-cli'
 cask '1password'
-cask 'alfred'
-cask 'balenaetcher'
-cask 'bitbar'
-#cask 'bitwarden'
-cask 'canon-eos-webcam-utility'
-cask 'captain'
-cask 'contexts'
 cask 'discord'
 cask 'docker'
 cask 'gitify'
 cask 'google-chrome'
-# cask 'google-cloud-sdk'
+cask 'google-cloud-sdk'
 cask 'iterm2'
-cask 'kap'
 cask 'karabiner-elements'
 cask 'keepingyouawake'
 cask 'lulu'
@@ -101,6 +92,7 @@ cask 'microsoft-edge'
 cask 'notion'
 cask 'numi'
 cask 'osxfuse'
+cask 'raycast'
 cask 'raspberry-pi-imager'
 cask 'sequel-pro'
 cask 'sketch'
@@ -112,32 +104,33 @@ cask 'whatsapp'
 cask 'yubico-yubikey-manager'
 cask 'zoom'
 
-# 3d Printing
-cask 'autodesk-fusion360'
-cask 'prusaslicer'
-cask 'ultimaker-cura'
+# # 3d Printing
+# cask 'autodesk-fusion360'
+# cask 'prusaslicer'
+# cask 'ultimaker-cura'
 
 # Audio & Music
-tap 'hannesbraun/homebrew-cask-audio'
-cask 'dexed'
-cask 'focusrite-control'
-cask 'fogpad'
-cask 'helm'
-cask 'midi-monitor'
-cask 'native-access'
-# cask 'ob-xd'
-cask 'spotify'
-cask 'surge-synthesizer'
-cask 'sysex-librarian'
-cask 'transformant'
-cask 'vcv-rack'
+# tap 'hannesbraun/homebrew-cask-audio'
+# cask 'dexed'
+# cask 'focusrite-control'
+# cask 'fogpad'
+# cask 'helm'
+# cask 'midi-monitor'
+# cask 'native-access'
+# cask 'spotify'
+# cask 'surge-synthesizer'
+# cask 'sysex-librarian'
+# cask 'transformant'
+# cask 'vcv-rack'
+# cask 'valhallafreqecho'
+# cask 'valhallaspacemodulator'
+# cask 'valhallasupermassive'
 
 # Quicklook plugins
 cask 'betterzip'
 cask 'qlimagesize'
 cask 'quicklook-csv'
 cask 'quicklook-json'
-cask 'quicklookapk'
 
 # Fonts
 cask 'font-fira-code'
@@ -145,13 +138,7 @@ cask 'font-fira-code-nerd-font'
 # cask 'font-roboto'
 # cask 'font-roboto-mono'
 
-mas 'Annotate', id: 918207447
-mas 'Bitwarden', id: 1352778147
-mas 'Noizio', id: 928871589
-mas 'Simplenote', id: 692867256
 mas 'Slack', id: 803453959
 mas 'Textual', id: 896450579
-mas 'Todoist', id: 585829637
 mas 'ToothFairy', id: 1191449274
-mas 'Trello', id: 1278508951
 mas 'XCode', id: 497799835
