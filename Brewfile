@@ -94,10 +94,9 @@ cask 'raspberry-pi-imager'
 cask 'raycast'
 cask 'sequel-pro'
 cask 'sketch'
-cask 'trezor-bridge'
+cask 'trezor-suite'
 cask 'visual-studio-code'
 cask 'whatsapp'
-cask 'yubico-yubikey-manager'
 cask 'zoom'
 
 # Quicklook plugins
