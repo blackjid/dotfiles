@@ -62,7 +62,6 @@ brew 'rsync'
 brew 'sleepwatcher', restart_service: true
 brew 'starship'
 brew 'terraform'
-brew 'thefuck'
 brew 'thoughtbot/formulae/parity'
 brew 'tldr'
 brew 'wifi-password'
