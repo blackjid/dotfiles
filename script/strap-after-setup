@@ -23,5 +23,8 @@ mackup restore
 # Setup fzf key bindings
 $(brew --prefix)/opt/fzf/install
 
+# Install rosetta
+softwareupdate --install-rosetta --agree-to-license
+
 # Run scripts
 # script/extract-onepassword-secrets
