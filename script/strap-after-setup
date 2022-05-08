@@ -17,6 +17,9 @@ fisher
 # Run macos script
 # $HOME/.macos
 
+# Restore Mackup backups
+mackup restore
+
 # Setup fzf key bindings
 $(brew --prefix)/opt/fzf/install
 
