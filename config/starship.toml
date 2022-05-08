@@ -1,10 +1,6 @@
 # Don't print a new line at the start of the prompt
 add_newline = true
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]      # The name of the module we are configuring is "character"
-symbol = "➜"     # The "symbol" segment is being set to "➜"
-
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
@@ -12,21 +8,25 @@ disabled = true
 [aws]
 disabled = true
 
+[battery]
+disabled = false
+
+[gcloud]
+format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
+[gcloud.project_aliases]
+very-long-project-name = "vlpn"
+
 [kubernetes]
 disabled = false
 
 [kubernetes.context_aliases]
-"gke_buda-default-prod_us-east1-b_apps-prod" = "prod"
-"gke_buda-default-staging_us-east1-b_apps-staging" = "staging"
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
 
 [nodejs]
 disabled = true
 
 [line_break]
 disabled = false
-
-[ruby]
-disabled = true
 
 [python]
 disabled = true
