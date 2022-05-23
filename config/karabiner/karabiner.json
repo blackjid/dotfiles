@@ -12,11 +12,17 @@
                 },
                 "rules": [
                     {
+                        "description": "Change caps_lock to left_control if pressed with other keys, change caps_lock to escape if pressed alone.",
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to control when used as modifier, escape when used alone",
+                                "type": "basic",
                                 "from": {
-                                    "key_code": "caps_lock"
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -27,8 +33,7 @@
                                     {
                                         "key_code": "escape"
                                     }
-                                ],
-                                "type": "basic"
+                                ]
                             }
                         ]
                     }
