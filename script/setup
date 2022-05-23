@@ -4,4 +4,4 @@ tap 'thoughtbot/formulae'
 brew 'rcm'
 EOF
 
-RCRC=$(pwd)/rcrc rcup
+SYMLINK_DIR="config/karabiner" SRCRC=$(pwd)/rcrc rcup
