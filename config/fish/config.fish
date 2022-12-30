@@ -5,7 +5,7 @@ set PATH /opt/homebrew/bin $PATH
 starship init fish | source
 
 # Setup asdf
-source /opt/homebrew/opt/asdf/asdf.fish
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # Remove greeting
 set fish_greeting
