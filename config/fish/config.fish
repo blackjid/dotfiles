@@ -1,8 +1,12 @@
 # Add homebrew to the path
 set PATH /opt/homebrew/bin $PATH
 
-# Source Starship
-starship init fish | source
+# Source when interactive
+if status is-interactive &>/dev/null
+    atuin init fish --disable-up-arrow | source
+    starship init fish | source
+    zoxide init fish | source
+end
 
 # Setup asdf
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
