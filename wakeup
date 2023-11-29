@@ -2,6 +2,9 @@
 
 # Sleepwatcher Wake Script
 
+### Launchd doent load user env variables, so we need to set the path
+PATH=$PATH:/opt/homebrew/bin
+
 ## Connect Headphones
 BLUEUTIL_PATH=$(brew --prefix)/bin/blueutil
 BT_DEVICE_ID="70-26-05-3b-ba-2c"
