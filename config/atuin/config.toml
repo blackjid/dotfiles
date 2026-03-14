@@ -37,7 +37,8 @@ sync_address = "https://atuin.blkh.dev"
 ## which filter mode to use when atuin is invoked from a shell up-key binding
 ## the accepted values are identical to those of "filter_mode"
 ## leave unspecified to use same mode set in "filter_mode"
-# filter_mode_shell_up_keybinding = "global"
+filter_mode_shell_up_key_binding = "directory"
+#inline_height_shell_up_key_binding = 1
 
 ## which style to use
 ## possible values: auto, full, compact
@@ -45,11 +46,11 @@ style = "compact"
 
 ## the maximum number of lines the interface should take up
 ## set it to 0 to always go full screen
-inline_height = 30
+inline_height = 20
 
 ## enable or disable showing a preview of the selected command
 ## useful when the command is longer than the terminal width and is cut off
-# show_preview = false
+show_preview = false
 
 ## what to do when the escape key is pressed when searching
 ## possible values: return-original, return-query
@@ -64,12 +65,99 @@ inline_height = 30
 ## number of context lines to show when scrolling by pages
 # scroll_context_lines = 1
 
+secrets_filter = true
+
+prefers_reduced_motion = true
+
+ctrl_n_shortcuts = true
+
+show_tabs = false
+show_help = false
+
+[ui]
+columns = ["duration", "time", "command"]
+
 ## prevent commands matching any of these regexes from being written to history.
 ## Note that these regular expressions are unanchored, i.e. if they don't start
 ## with ^ or end with $, they'll match anywhere in the command.
 ## For details on the supported regular expression syntax, see
 ## https://docs.rs/regex/latest/regex/#syntax
 history_filter = [
-  "^bin/add-secret",
-  "^innocuous-cmd .*--secret=.+"
+  # bin/add-secret with literal value (not subshell/variable)
+  # Match: bin/add-secret KEY_NAME abc123def456 prod
+  # Skip: bin/add-secret KEY_NAME $(op read ...) prod
+  # Skip: bin/add-secret KEY_NAME $MY_VAR prod
+  "bin/add-secret [A-Z_]+ [^$`(][A-Za-z0-9._-]{10,}",
+  "^innocuous-cmd .*--secret=.+",
+  # Environment variable exports with sensitive keywords (only literal values, not subshells)
+  # Match: export TOKEN=abc123
+  # Skip: export TOKEN=$(get-token) or export TOKEN=$VAR
+  "export [A-Z_]*TOKEN[A-Z_]*=[^$`(][^[:space:]]*",
+  "export [A-Z_]*KEY[A-Z_]*=[^$`(][^[:space:]]*",
+  "export [A-Z_]*PASSWORD[A-Z_]*=[^$`(][^[:space:]]*",
+  "export [A-Z_]*SECRET[A-Z_]*=[^$`(][^[:space:]]*",
+  "export [A-Z_]*API_KEY[A-Z_]*=[^$`(][^[:space:]]*",
+  "export [A-Z_]*PASSWD[A-Z_]*=[^$`(][^[:space:]]*",
+  "export [A-Z_]*CREDENTIALS[A-Z_]*=[^$`(][^[:space:]]*",
+  # Command line flags with literal values (not subshells or variables)
+  # Match: --token abc123
+  # Skip: --token $(gh auth token) or --token $TOKEN
+  "--token[= ][^$`(][^[:space:]]*",
+  "--password[= ][^$`(][^[:space:]]*",
+  "--secret[= ][^$`(][^[:space:]]*",
+  "--api-key[= ][^$`(][^[:space:]]*",
+  "--apikey[= ][^$`(][^[:space:]]*",
+  # Authentication headers with literal tokens (not subshells)
+  "Authorization:[^$`(]*[A-Za-z0-9+/=]{20,}",
+  "Bearer [^$`(][A-Za-z0-9._-]{20,}",
+  "Basic [A-Za-z0-9+/=]{20,}",
+  # Cloud provider credentials with literal values
+  "AWS_ACCESS_KEY_ID=[^$`(][^[:space:]]*",
+  "AWS_SECRET_ACCESS_KEY=[^$`(][^[:space:]]*",
+  "GOOGLE_APPLICATION_CREDENTIALS=[^$`(][^[:space:]]*",
+  "GCP_KEY=[^$`(][^[:space:]]*",
+  "AZURE_CLIENT_SECRET=[^$`(][^[:space:]]*",
+  # Git credentials in URLs (these are always literal)
+  "git.*https://[^:]+:[^@$`(]+@",
+  "git clone.*://[^:]+:[^@$`(]+@",
+  # Database connection strings with embedded credentials
+  "://[^:/@$`(]+:[^@$`(]+@",
+  # SSH and certificates (always literal in history)
+  "BEGIN.*PRIVATE KEY",
+  "BEGIN.*CERTIFICATE",
+  # curl/wget with Authorization headers (literal tokens only)
+  "curl.*-H.*Authorization.*[A-Za-z0-9+/=]{20,}",
+  "wget.*--header.*Authorization.*[A-Za-z0-9+/=]{20,}",
+  # kubectl create secret commands with literal values
+  "kubectl create secret.*--from-literal=.*=.+",
+  "kubectl create secret.*--from-file=.*\\.pem",
+  "kubectl create secret.*--from-file=.*\\.key",
+  "kubectl create secret.*--from-file=.*\\.cert",
+  "kubectl create secret.*--from-file=.*\\.json",
+  "kubectl create secret.*--from-file=.*-key\\.pem",
+  "kubectl create secret.*--from-file=gcs-credentials",
+  # echo piping secrets to kubectl
+  "echo -n [\"'][^\"']+[\"'] \\| kubectl create secret",
+  "echo [\"'][^\"']+[\"'] \\| kubectl",
+  # curl with cookies (session tokens)
+  "curl.*-b [\"'].*[A-Za-z0-9._=-]{50,}",
+  "curl.*-b.*CF_Authorization=",
+  "curl.*-b.*session[A-Za-z0-9_]*=",
+  "curl.*--cookie.*[A-Za-z0-9._=-]{50,}",
+  "curl.*-H [\"']Cookie:.*[A-Za-z0-9._=-]{50,}",
+  # curl with JWT tokens or long auth strings
+  "curl.*-H.*eyJ[A-Za-z0-9._-]+",
+  # OpenAI and similar API keys
+  "OPENAI_API_KEY=sk-[A-Za-z0-9_-]+",
+  "--from-literal=OPENAI_API_KEY=",
+  "INTERCOM_ACCESS_TOKEN=[A-Za-z0-9+/=]{20,}",
+  "--from-literal=INTERCOM_ACCESS_TOKEN=",
+  # Mandrill and other email service passwords
+  "MANDRILL_PASS=[^[:space:]]+",
+  "--from-file=MANDRILL_PASS=",
+  # Any long base64-looking strings in commands (potential tokens/keys)
+  "[A-Za-z0-9+/]{100,}={0,2}",
+  # Private key content inline
+  "-----BEGIN",
+  "-----END"
 ]
