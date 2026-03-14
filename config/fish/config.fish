@@ -1,15 +1,22 @@
 # Add homebrew to the path
-set PATH /opt/homebrew/bin $PATH
+set PATH $PATH /opt/homebrew/bin
 
 # Source when interactive
-if status is-interactive &>/dev/null
-    atuin init fish --disable-up-arrow | source
+if status is-interactive
     starship init fish | source
+    atuin init fish | source
     zoxide init fish | source
-end
 
-# Setup asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+    # Prevent starship from showing the command duration when the user presses Enter
+    function reset_starship_cmd_duration
+        set -ge CMD_DURATION
+        commandline -f execute
+    end
+    bind \r reset_starship_cmd_duration
+
+    # Disable fish native history in favor of atuin
+    set -g fish_history ""
+end
 
 # Remove greeting
 set fish_greeting
