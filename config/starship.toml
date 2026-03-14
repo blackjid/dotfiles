@@ -1,32 +1,189 @@
-# Don't print a new line at the start of the prompt
-add_newline = true
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# Disable the package module, hiding it from the prompt completely
+format = """
+${custom.org_blackjid}\
+${custom.org_contrib}\
+${custom.org_buda}\
+${custom.org_platanus}\
+${custom.org_sandbox}\
+[](fg:color_yellow)\
+$directory\
+[](fg:color_yellow bg:color_aqua)\
+$git_branch\
+[](fg:color_aqua bg:color_blue)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$terraform\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:color_blue bg:color_bg3)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_bg3 bg:color_bg1)\
+$time\
+[ ](fg:color_bg1)\
+$git_metrics\
+$cmd_duration\
+$line_break$character"""
+
+# right_format = """$kubernetes$gcloud$terraform$direnv$mise${custom.warp}"""
+right_format = """$all"""
+
+palette = 'gruvbox_dark'
+command_timeout = 700
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[character]
+disabled = false
+
+[cmd_duration]
+min_time = 1000
+# show_notifications = true
+# min_time_to_notify = 200
+# format = 'took [$duration](bold yellow)'
+
+[os]
+disabled = true
+
+[directory]
+style = "fg:color_fg0 bg:color_yellow"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+
+[git_status]
+disabled = true
+# style = "bg:color_aqua"
+# # format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+
+# ahead = '⇡${count}'
+# diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+# behind = '⇣${count}'
+
+[git_metrics]
+disabled = false
+
+[nodejs]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:color_bg3"
+format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+
+[time]
+disabled = true
+time_format = "%R"
+style = "bg:color_bg1"
+format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+[line_break]
+disabled = false
+## Custom modules
+
+[kubernetes]
+disabled = false
+
+[[kubernetes.contexts]]
+context_pattern = "gke_.*_(?P<var_cluster>[\\w-]+)"
+context_alias = "gke-$var_cluster"
+
 [package]
+disabled = true
+
+[direnv]
+disabled = false
+symbol = "env "
+format = '[$symbol$loaded/$allowed]($style) '
+loaded_msg = "✅"
+denied_msg = "❌"
+allowed_msg = "🔒"
+
+[mise]
+disabled = false
+
+[terraform]
+disabled = true
+
+[ruby]
 disabled = true
 
 [aws]
 disabled = true
 
-[battery]
-disabled = false
-
 [gcloud]
-format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
-[gcloud.project_aliases]
-very-long-project-name = "vlpn"
-
-[kubernetes]
 disabled = false
+detect_env_vars = ['CLOUDSDK_CONFIG']
+format = 'on [$symbol$project]($style) '
 
-[kubernetes.context_aliases]
-"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+[custom.org_blackjid]
+when = 'echo "$PWD" | grep -q "/src/blackjid"'
+shell = ["sh"]
+command = "echo blackjid"
+format = "[](fg:#40B071)[](#40B071)[ $output ](bg:#40B071 fg:color_fg0 bold italic)[](bg:color_yellow fg:#40B071)[ ](fg:#40B071)"
+style = ""
 
-[nodejs]
-disabled = true
+[custom.org_contrib]
+when = 'echo "$PWD" | grep -q "/src/contrib"'
+shell = ["sh"]
+command = "echo contrib"
+format = "[](fg:#FF3590)[](#FF3590)[ $output ](bg:#FF3590 fg:color_fg0 bold italic)[](bg:color_yellow fg:#FF3590)[ ](fg:#FF3590)"
+style = ""
 
-[line_break]
-disabled = false
+[custom.org_buda]
+when = 'echo "$PWD" | grep -q "/src/buda"'
+shell = ["sh"]
+command = "echo buda"
+format = "[](fg:#4D4DFF)[](#4D4DFF)[ $output ](bg:#4D4DFF fg:color_fg0 bold italic)[](bg:color_yellow fg:#4D4DFF)[ ](fg:#4D4DFF)"
+style = ""
 
-[python]
-disabled = true
+[custom.org_platanus]
+when = 'echo "$PWD" | grep -q "/src/platanus"'
+shell = ["sh"]
+command = "echo platanus"
+format = "[](fg:color_yellow)[](color_yellow)[ $output ](bg:color_yellow fg:color_fg0 bold italic)[](bg:color_yellow fg:color_yellow)[ ](fg:color_yellow)"
+style = ""
+
+[custom.org_sandbox]
+when = 'echo "$PWD" | grep -q "/src/sandbox"'
+shell = ["sh"]
+command = "echo sandbox"
+format = "[](fg:#B61E76)[](#B61E76)[ $output ](bg:#B61E76 fg:color_fg0 bold italic)[](bg:color_yellow fg:#B61E76)[ ](fg:#B61E76)"
+style = ""
+
+[custom.warp]
+command = "warp-cli status | sed -n 's/^Status update: //p'"
+when = 'warp-cli status | grep -q "Connected"'
+shell = "sh"
+format = "[󰅟 $output]($style) "
+style = "fg:#ff8800 bold"
