@@ -13,13 +13,13 @@
 dialect = "us"
 
 ## enable or disable automatic sync
-auto_sync = false
+auto_sync = true
 
 ## enable or disable automatic update checks
 # update_check = true
 
 ## address of the sync server
-# sync_address = "https://api.atuin.sh"
+sync_address = "https://atuin.blkh.dev"
 
 ## how often to sync history. note that this is only triggered when a command
 ## is ran, so sync intervals may well be longer
