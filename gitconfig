@@ -35,7 +35,8 @@
   pager = delta
 
 [push]
-  default = current
+  default = simple
+  autoSetupRemote = true
 
 [pull]
   ff = only
@@ -48,21 +49,38 @@
 
 [merge]
   ff = only
+  conflictstyle = zdiff3
+
+[rebase]
+  autosquash = true
+  autoStash = true
+  updateRefs = true
 
 [commit]
   template = ~/.gitmessage
 
-[gitsh]
-  noGreeting = true
-  defaultCommand = status --short --branch && :echo
+[rerere]
+  enable = true
+  autoupdate = true
 
-[gitsh "color"]
-  default = cyan
-  untracked = yellow
-  modified = red
+[log]
+  date = auto:human
 
 [interactive]
   diffFilter = delta --color-only
+
+#[gitsh]
+#  noGreeting = true
+#  defaultCommand = status --short --branch && :echo
+
+#[gitsh "color"]
+#  default = cyan
+#  untracked = yellow
+#  modified = red
+
+[diff]
+  algorithm = patience
+  colorMoved = default
 
 [github]
   user = blackjid
@@ -82,3 +100,9 @@
 
 [init]
 	defaultBranch = main
+
+[branch]
+	sort = -committerdate
+
+[column]
+	ui = auto
