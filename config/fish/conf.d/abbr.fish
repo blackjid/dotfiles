@@ -1,6 +1,6 @@
-if status --is-interactive
-    abbr --add --global kns kubens
-    abbr --add --global kctx kubectx
+if status is-interactive
+    abbr -a kns kubens
+    abbr -a kctx kubectx
 
-    abbr --add --global b bundle
+    abbr -a b bundle
 end
