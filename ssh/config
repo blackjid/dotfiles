@@ -2,10 +2,8 @@ Host *
 	StrictHostKeyChecking ask
 	VerifyHostKeyDNS ask
 	NoHostAuthenticationForLocalhost yes
-	IdentityFile ~/.ssh/id_ed25519
-	IdentityFile ~/.ssh/id_rsa
-	UseKeychain yes
-	AddKeysToAgent yes
+	# Keys live in 1Password; its SSH agent serves them (no private keys on disk).
+	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 	ControlMaster auto
 	ControlPath /tmp/ssh-%r@%h:%p.socket
 	ControlPersist 10m

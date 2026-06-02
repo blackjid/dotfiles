@@ -26,8 +26,13 @@ cd ~/.dotfiles
 
 ## Post-install
 
-Pull SSH keys and secrets from 1Password (requires the `op` CLI, installed via
-the Brewfile):
+SSH keys are served by the **1Password SSH agent** — private keys never touch
+disk. Enable it once in the 1Password app: **Settings > Developer > "Use the
+SSH agent"**, and make sure each key is stored as an *SSH Key* item (not a
+document). `ssh/config` points `IdentityAgent` at the agent socket.
+
+Pull remaining secrets from 1Password (requires the `op` CLI, installed via the
+Brewfile):
 
 ```sh
 ./script/extract-onepassword-secrets
