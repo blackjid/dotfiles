@@ -1,6 +1,8 @@
 alias cat="bat"
 alias help="tldr"
 alias e="nvim"
+# Clobber vim with nvim — muscle memory still types `vim`
+alias vim="nvim"
 
 # Modern ls using eza (EZA_STANDARD_OPTIONS adds --icons)
 alias ls="eza"
