@@ -5,6 +5,11 @@ fish_add_path /opt/homebrew/bin
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
+# Route all SSH-agent-aware tools through the 1Password SSH agent. OpenSSH picks
+# this up via IdentityAgent in ~/.ssh/config; this env var covers Go-based tools
+# (terraform, terragrunt) that read SSH_AUTH_SOCK directly and ignore ssh config.
+set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
 # Source when interactive
 if status is-interactive
     starship init fish | source
