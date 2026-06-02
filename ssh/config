@@ -8,3 +8,4 @@ Host *
 	AddKeysToAgent yes
 	ControlMaster auto
 	ControlPath /tmp/ssh-%r@%h:%p.socket
+	ControlPersist 10m
