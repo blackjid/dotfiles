@@ -1,3 +1,6 @@
 /ssh/id_*
 !/ssh/id_*.pub
 /ssh/known_hosts
+
+# Karabiner auto-generated config backups
+/config/karabiner/automatic_backups/

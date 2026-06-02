@@ -1,1 +1,1 @@
-EXCLUDES="README.md script .gitignore vscode-extensions"
+EXCLUDES="README.md script .gitignore"
