@@ -35,7 +35,7 @@
         "revision": "0d8531ad9c56eb7e080a8b7035d9ff18d1804828"
       },
       "hannesbraun/cask-audio": {
-        "revision": "1be78cbaa50759e01b958333e1501362bf64fd70"
+        "revision": "4408d8b390f7668b003d7defeb9736901003d989"
       }
     },
     "brew": {
@@ -2943,7 +2943,7 @@
         }
       },
       "focusrite-control": {
-        "version": "3.7.2.1923",
+        "version": "3.11.0.1983",
         "options": {
           "full_name": "focusrite-control"
         }
@@ -3144,13 +3144,13 @@
         }
       },
       "prusaslicer": {
-        "version": "2.3.0,202101111304",
+        "version": "2.5.2,202303231232",
         "options": {
           "full_name": "prusaslicer"
         }
       },
       "ultimaker-cura": {
-        "version": "4.8.0",
+        "version": "5.3.1",
         "options": {
           "full_name": "ultimaker-cura"
         }
@@ -3174,25 +3174,25 @@
         }
       },
       "midi-monitor": {
-        "version": "1.4.1",
+        "version": "1.5.3",
         "options": {
           "full_name": "midi-monitor"
         }
       },
       "native-access": {
-        "version": "1.13.1.134",
+        "version": "3.3.1",
         "options": {
           "full_name": "native-access"
         }
       },
       "surge-synthesizer": {
-        "version": "1.8.1",
+        "version": "1.9.0",
         "options": {
           "full_name": "surge-synthesizer"
         }
       },
       "sysex-librarian": {
-        "version": "1.4.1",
+        "version": "1.5.1",
         "options": {
           "full_name": "sysex-librarian"
         }
@@ -3204,7 +3204,7 @@
         }
       },
       "vcv-rack": {
-        "version": "1.1.6",
+        "version": "2.3.0",
         "options": {
           "full_name": "vcv-rack"
         }
@@ -3274,6 +3274,36 @@
         "options": {
           "full_name": "obsidian"
         }
+      },
+      "ableton-live-lite": {
+        "version": "11.2.11",
+        "options": {
+          "full_name": "ableton-live-lite"
+        }
+      },
+      "spitfire-audio": {
+        "version": "3.4.6,1680652800",
+        "options": {
+          "full_name": "spitfire-audio"
+        }
+      },
+      "valhallafreqecho": {
+        "version": "1.2.5.1",
+        "options": {
+          "full_name": "valhallafreqecho"
+        }
+      },
+      "valhallaspacemodulator": {
+        "version": "1.2.5",
+        "options": {
+          "full_name": "valhallaspacemodulator"
+        }
+      },
+      "valhallasupermassive": {
+        "version": "1.5.0",
+        "options": {
+          "full_name": "valhallasupermassive"
+        }
       }
     },
     "mas": {
@@ -3314,6 +3344,10 @@
       "Notability": {
         "id": "360593530",
         "version": "12.1.6"
+      },
+      "Model D": {
+        "id": "1339418001",
+        "version": "1.3.21"
       }
     }
   },

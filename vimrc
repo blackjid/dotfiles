@@ -6,6 +6,7 @@ set nocompatible
 let mapleader = " "
 
 set backspace=2   " Backspace deletes like most programs in insert mode
+set mmp=10000
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
@@ -35,7 +36,7 @@ let g:ale_linters = {
 \}
 
 let g:ale_sign_column_always = 1
-let g:ale_linters_explicit = 1 
+let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 
 augroup vimrcEx
@@ -72,9 +73,6 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-
-" Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
 
 " Color scheme
 syntax on

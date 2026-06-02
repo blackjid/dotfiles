@@ -7,7 +7,7 @@ PATH=$PATH:/opt/homebrew/bin
 
 ## Disconnect headphones
 BLUEUTIL_PATH=$(brew --prefix)/bin/blueutil
-BT_DEVICE_ID="70-26-05-3b-ba-2c"
+BT_DEVICE_ID="80-c3-ba-59-b4-17"
 
 if [ $($BLUEUTIL_PATH --is-connected $BT_DEVICE_ID) == 1 ]; then
   $BLUEUTIL_PATH --disconnect $BT_DEVICE_ID --info $BT_DEVICE_ID || echo "Device not found..."
