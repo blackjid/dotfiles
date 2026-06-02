@@ -1,12 +1,15 @@
 # Add homebrew to the path
 fish_add_path /opt/homebrew/bin
 
+# Default editor (also used by git, etc.)
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 # Source when interactive
 if status is-interactive
     starship init fish | source
     atuin init fish | source
     zoxide init fish | source
-    thefuck --alias | source
 
     # Prevent starship from showing the command duration when the user presses Enter
     function reset_starship_cmd_duration
