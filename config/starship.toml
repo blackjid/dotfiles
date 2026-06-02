@@ -33,8 +33,7 @@ $git_metrics\
 $cmd_duration\
 $line_break$character"""
 
-# right_format = """$kubernetes$gcloud$terraform$direnv$mise${custom.warp}"""
-right_format = """$all"""
+right_format = """$kubernetes$gcloud$direnv$mise${custom.warp}"""
 
 palette = 'gruvbox_dark'
 command_timeout = 700
