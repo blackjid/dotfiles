@@ -1,11 +1,12 @@
 # Add homebrew to the path
-set PATH $PATH /opt/homebrew/bin
+fish_add_path /opt/homebrew/bin
 
 # Source when interactive
 if status is-interactive
     starship init fish | source
     atuin init fish | source
     zoxide init fish | source
+    thefuck --alias | source
 
     # Prevent starship from showing the command duration when the user presses Enter
     function reset_starship_cmd_duration
@@ -48,4 +49,4 @@ set -g fish_color_selection white --bold '--background=brblack'
 set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
 
-set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin
+set -q KREW_ROOT; and fish_add_path $KREW_ROOT/.krew/bin; or fish_add_path $HOME/.krew/bin
