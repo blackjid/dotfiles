@@ -1,7 +1,31 @@
 #!/bin/bash
+set -e
+
+# Install Homebrew if not present
+if ! command -v brew &>/dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install rcm for dotfile management
 brew bundle --file=- <<EOF
 tap 'thoughtbot/formulae'
 brew 'rcm'
 EOF
 
+# Link dotfiles (karabiner config gets a special SYMLINK_DIR treatment)
 SYMLINK_DIR="config/karabiner" SRCRC=$(pwd)/rcrc rcup
+
+# Install all Brewfile packages
+brew bundle
+
+# Add fish to allowed shells and set as default
+FISH_PATH="$(brew --prefix)/bin/fish"
+if ! grep -qF "$FISH_PATH" /etc/shells; then
+  echo "$FISH_PATH" | sudo tee -a /etc/shells
+fi
+if [ "$SHELL" != "$FISH_PATH" ]; then
+  chsh -s "$FISH_PATH"
+fi
+
+# Install fisher and fish plugins
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher && fisher update"
