@@ -12,11 +12,9 @@ call plug#begin('~/.vim/plugged')
 
 " Define bundles via Github repos
 Plug 'altercation/vim-colors-solarized'
-Plug 'kchmck/vim-coffee-script'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
 Plug 'dense-analysis/ale'
