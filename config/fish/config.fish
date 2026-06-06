@@ -23,8 +23,9 @@ if status is-interactive
     end
     bind \r reset_starship_cmd_duration
 
-    # Disable fish native history in favor of atuin
-    set -g fish_history ""
+    # Keep fish's native history enabled so the dimmed inline autosuggestion
+    # works (fish draws suggestions from its own history, not atuin). Atuin
+    # records independently and still powers Ctrl+R / up-arrow search.
 end
 
 # Remove greeting
