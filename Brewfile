@@ -39,7 +39,7 @@ brew 'wget'
 # General purpose cli tools
 brew 'age'
 brew 'aria2'
-brew 'atuin'
+brew 'atuin', start_service: true
 brew 'awscli'
 brew 'bat'
 brew 'blueutil'
