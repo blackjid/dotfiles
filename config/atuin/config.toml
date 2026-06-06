@@ -74,9 +74,6 @@ ctrl_n_shortcuts = true
 show_tabs = false
 show_help = false
 
-[ui]
-columns = ["duration", "time", "command"]
-
 ## prevent commands matching any of these regexes from being written to history.
 ## Note that these regular expressions are unanchored, i.e. if they don't start
 ## with ^ or end with $, they'll match anywhere in the command.
@@ -161,3 +158,9 @@ history_filter = [
   "-----BEGIN",
   "-----END"
 ]
+
+[daemon]
+enabled = true
+
+[ui]
+columns = ["duration", "time", "command"]
