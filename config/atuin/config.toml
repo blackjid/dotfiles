@@ -40,6 +40,10 @@ sync_address = "https://atuin.blkh.dev"
 filter_mode_shell_up_key_binding = "directory"
 #inline_height_shell_up_key_binding = 1
 
+## up-arrow matches commands that *start with* the text already on the line
+## (Ctrl-R keeps the fuzzy "search_mode" above)
+search_mode_shell_up_key_binding = "prefix"
+
 ## which style to use
 ## possible values: auto, full, compact
 style = "compact"
@@ -71,7 +75,7 @@ prefers_reduced_motion = true
 
 ctrl_n_shortcuts = true
 
-show_tabs = false
+show_tabs = true
 show_help = false
 
 ## prevent commands matching any of these regexes from being written to history.
