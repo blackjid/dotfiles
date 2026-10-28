@@ -1,5 +1,7 @@
 # Add homebrew to the path
 fish_add_path /opt/homebrew/bin
+fish_add_path $HOME/.local/bin   # uv tools
+fish_add_path -a $HOME/.docker/bin
 
 # Default editor (also used by git, etc.)
 set -gx EDITOR nvim
