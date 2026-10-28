@@ -10,3 +10,5 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 .vscode/**
+
+**/.claude/settings.local.json
