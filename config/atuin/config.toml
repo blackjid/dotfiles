@@ -46,7 +46,7 @@ search_mode_shell_up_key_binding = "prefix"
 
 ## which style to use
 ## possible values: auto, full, compact
-style = "compact"
+style = "auto"
 
 ## the maximum number of lines the interface should take up
 ## set it to 0 to always go full screen
@@ -54,7 +54,7 @@ inline_height = 20
 
 ## enable or disable showing a preview of the selected command
 ## useful when the command is longer than the terminal width and is cut off
-show_preview = false
+show_preview = true
 
 ## what to do when the escape key is pressed when searching
 ## possible values: return-original, return-query
@@ -168,3 +168,9 @@ enabled = true
 
 [ui]
 columns = ["duration", "time", "command"]
+
+[ai]
+enabled = true
+
+[pty_proxy]
+enabled = true

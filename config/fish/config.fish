@@ -12,6 +12,8 @@ set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t
 
 # Source when interactive
 if status is-interactive
+    # Skip the atuin pty-proxy in Orca tabs; it delays Orca's shell-ready detection
+    set -q ORCA_PANE_KEY; and set -gx ATUIN_PTY_PROXY__ENABLED false
     starship init fish | source
     atuin init fish | source
     zoxide init fish | source
