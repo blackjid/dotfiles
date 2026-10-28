@@ -33,7 +33,7 @@ $git_metrics\
 $cmd_duration\
 $line_break$character"""
 
-right_format = """$kubernetes$gcloud$direnv$mise${custom.warp}"""
+right_format = """$kubernetes$gcloud$mise${env_var.MISE_ENV}${custom.warp}"""
 
 palette = 'gruvbox_dark'
 command_timeout = 700
@@ -121,15 +121,18 @@ context_alias = "gke-$var_cluster"
 disabled = true
 
 [direnv]
-disabled = false
-symbol = "env "
-format = '[$symbol$loaded/$allowed]($style) '
-loaded_msg = "✅"
-denied_msg = "❌"
-allowed_msg = "🔒"
+disabled = true
 
 [mise]
 disabled = false
+symbol = ""
+format = '[$symbol$health]($style) '
+healthy_symbol = ""
+unhealthy_symbol = "⚠ mise"
+style = "bold fg:color_red"
+
+[env_var.MISE_ENV]
+format = '[env:$env_value](fg:color_purple bold) '
 
 [terraform]
 disabled = true
