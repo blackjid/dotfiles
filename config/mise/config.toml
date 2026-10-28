@@ -1,0 +1,29 @@
+[settings]
+pin = true
+idiomatic_version_file_enable_tools = []
+experimental = true
+activate_aggressive = true
+
+[settings.status]
+# Colored +env/-env comes from ~/.config/fish/conf.d/zz-mise-status-color.fish
+show_env = false
+show_tools = false
+truncate = false
+
+[settings.python]
+uv_venv_auto = "source"
+
+[settings.github]
+use_git_credentials = true
+
+[tools]
+docker-cli = "29.8.1"
+go = "1.24"
+helm = "latest"
+mysql = "latest"
+node = "24.3"
+python = "3.13.5"
+ruby = "4.0.6"
+rust = "1.75.0"
+trivy = "latest"
+uv = "latest"
